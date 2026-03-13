@@ -1,14 +1,20 @@
 function login(){
 
-let name=document.getElementById("loginName").value;
-let pass=document.getElementById("loginPass").value;
+let user=document.getElementById("user").value;
+let pass=document.getElementById("pass").value;
 
-if(name && pass){
+if(user && pass){
 
-document.getElementById("loginScreen").style.display="none";
-document.getElementById("appScreen").classList.add("active");
+document.getElementById("login").style.display="none";
+document.getElementById("app").classList.add("active");
 
 }
+
+}
+
+function logout(){
+
+location.reload()
 
 }
 
@@ -21,7 +27,7 @@ document.getElementById(id).classList.remove("hidden");
 
 }
 
-function toggleDarkMode(){
+function toggleDark(){
 
 document.body.classList.toggle("dark");
 
