@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Mobile Docs</title>
 
@@ -14,23 +14,32 @@
 
 <body>
 
-<div id="loginScreen" class="screen active center">
+<div id="login" class="screen active center">
+
+<img src="logo.svg" class="logo">
 
 <h1>Mobile Docs</h1>
 
-<input id="loginName" placeholder="Imię">
-<input id="loginPass" type="password" placeholder="Hasło">
+<input id="user" placeholder="Login">
+<input id="pass" type="password" placeholder="Hasło">
 
 <button onclick="login()">Zaloguj</button>
+
+<p class="demo">demo: wpisz cokolwiek</p>
 
 </div>
 
 
-<div id="appScreen" class="screen">
+<div id="app" class="screen">
 
 <header>
-Moje dokumenty
+
+<img src="logo.svg" class="headerLogo">
+
+<span>Moje dokumenty</span>
+
 </header>
+
 
 <div class="container">
 
@@ -41,18 +50,27 @@ Moje dokumenty
 <img src="https://i.pravatar.cc/150">
 
 <div>
+
 <b>Jan Kowalski</b><br>
 <small>Profil użytkownika</small>
+
 </div>
 
 </div>
+
 
 <div class="card">
 
-<b>Dowód osobisty</b>
+<div class="cardTitle">
+
+Dowód osobisty
+
+</div>
 
 <div class="number">
+
 ABA 123456
+
 </div>
 
 <img class="qr"
@@ -60,20 +78,28 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=dowod">
 
 </div>
 
+
 <div class="card">
 
-<b>Prawo jazdy</b>
+<div class="cardTitle">
+
+Prawo jazdy
+
+</div>
 
 <div class="number">
-PJ 456789
+
+PJ 987654
+
 </div>
 
 <img class="qr"
-src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=prawojazdy">
+src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=pj">
 
 </div>
 
 </div>
+
 
 
 <div id="profile" class="hidden">
@@ -84,11 +110,15 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=prawojazdy">
 <p>Nazwisko: Kowalski</p>
 <p>PESEL: 00000000000</p>
 
-<button onclick="toggleDarkMode()">🌙 Tryb ciemny</button>
+<button onclick="toggleDark()">🌙 Tryb ciemny</button>
+
+<button onclick="logout()">Wyloguj</button>
 
 </div>
 
+
 </div>
+
 
 <div class="menu">
 
